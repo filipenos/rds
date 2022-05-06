@@ -1,9 +1,10 @@
 package csbalancing_test
 
 import (
-	csbalancing "github.com/ResultadosDigitais/developer_challenges/go"
 	"testing"
 	"time"
+
+	csbalancing "github.com/ResultadosDigitais/developer_challenges/go"
 )
 
 func TestCustomerSuccessBalancing(t *testing.T) {
