@@ -130,3 +130,22 @@ func buildSizeEntities(size int, Score int) []csbalancing.Entity {
 	}
 	return entities
 }
+
+func TestCreateCalls(t *testing.T) {
+	calls := make(csbalancing.Calls)
+
+	for i := 0; i < 10; i++ {
+		calls.Add(1)
+	}
+	for i := 0; i < 30; i++ {
+		calls.Add(3)
+	}
+	for i := 0; i < 50; i++ {
+		calls.Add(5)
+	}
+
+	id := calls.Get()
+	if id != 5 {
+		t.Errorf("Unexpected id: %d, expect 5", id)
+	}
+}
